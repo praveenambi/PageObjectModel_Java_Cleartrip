@@ -48,7 +48,7 @@ public class WethaerHomepage {
 
 
 	public int getWeatherDetails() {
-
+		basepage.init_properties();
 		waitForElement(driver , homeSearchCityElement);
 		homeSearchCityElement.sendKeys(props.getProperty("city"));
 		waitForElement(driver , CityElement);
