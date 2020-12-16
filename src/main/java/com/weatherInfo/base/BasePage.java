@@ -22,7 +22,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
  *
  */
 public class BasePage {
-	
+
 
 
 	public WebDriver driver;
@@ -50,6 +50,21 @@ public class BasePage {
 		return driver;
 	}
 
+
+	public void launchURL(String URL) throws InterruptedException {
+
+		driver.get(URL);
+		driver.manage().window().maximize();
+
+		Thread.sleep(8000);
+	}
+
+	public void closeAllbrowser() {
+
+		driver.quit();
+
+	}
+
 	public Properties init_properties() {
 		props = new Properties();
 		FileInputStream file;
@@ -70,13 +85,13 @@ public class BasePage {
 
 
 
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
 
 }

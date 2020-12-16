@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="10" name="Failed suite [Suite]">
+  <test thread-count="5" verbose="10" name="RegressionTests(failed)">
+    <classes>
+      <class name="com.weatherInfo.tests.WeatherInfoHomeTest">
+        <methods>
+          <include name="LaunchSetup"/>
+          <include name="getCityWeatherdetails"/>
+        </methods>
+      </class> <!-- com.weatherInfo.tests.WeatherInfoHomeTest -->
+    </classes>
+  </test> <!-- RegressionTests(failed) -->
+</suite> <!-- Failed suite [Suite] -->
