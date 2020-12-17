@@ -39,15 +39,28 @@ public class WeatherInfoHomeTest extends BasePage {
 
 	@Test
 	private void getCityWeatherdetails() {
+		try {
 
-		init_properties();
-		int webTemp = 	weatherpage.getWeatherDetails();
-		int apiTemp =  apiresponse.getWeatherAPI();
+			init_properties();
+			boolean flag = false;
+			double webTemp = 	weatherpage.getWeatherDetails();
+			double apiTemp =  apiresponse.getWeatherAPI();
 
-		Assert.assertEquals(webTemp, apiTemp);
+			if (apiTemp >webTemp -2 &&apiTemp<webTemp+2  ||  apiTemp== webTemp) {
+				System.out.println("The temparature is in range of WebTemperature");
+				flag=true;
+				Assert.assertTrue(flag);
+
+			}
+			Assert.fail();
+			throw new Exception("Temperature is not in tange");  // throwing a user defined exception with a exception message
 
 
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
+
 
 
 	@AfterClass

@@ -22,7 +22,7 @@ public class WeatherAPIResponse {
 	public BasePage basepage;
 	
 	
-	public int getWeatherAPI() {
+	public double getWeatherAPI() {
 		
 		
 		/*
@@ -45,7 +45,7 @@ public class WeatherAPIResponse {
 		String temp = json.getString(".main.temp");
 		System.out.println(temp);
 		
-		int tempurature = Integer.parseInt(temp);
+		double tempurature = Double.parseDouble(temp);
 		
 		return tempurature;
 		

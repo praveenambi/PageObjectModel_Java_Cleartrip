@@ -22,11 +22,11 @@ import com.weatherInfo.base.BasePage;
 public class WethaerHomepage {
 
 	int timeout = 10;
-	int temperature;
+	double temperature;
 
 	public static WebDriver driver;
 	public Properties props;
-	public BasePage basepage;
+	public BasePage basepage= new BasePage();
 
 
 	@FindBy(xpath = "//input[@id='searchBox']")
@@ -47,7 +47,7 @@ public class WethaerHomepage {
 
 
 
-	public int getWeatherDetails() {
+	public double getWeatherDetails() {
 		basepage.init_properties();
 		waitForElement(driver , homeSearchCityElement);
 		homeSearchCityElement.sendKeys(props.getProperty("city"));
@@ -63,7 +63,7 @@ public class WethaerHomepage {
 				String	tempdegree =	webElement.getText();
 				String degrrearr[] = 	tempdegree.split(":");
 				System.out.println(degrrearr[1]);
-				temperature = 	Integer.parseInt(degrrearr[1]);
+				temperature = 	Double.parseDouble(degrrearr[1]);
 
 			}
 		}
