@@ -1,13 +1,13 @@
 /**
  * 
  */
-package com.weatherInfo.pages;
+package com.cleartrip.pages;
 
 import static io.restassured.RestAssured.given;
 
 import java.util.Properties;
 
-import com.weatherInfo.base.BasePage;
+import com.cleartrip.base.BasePage;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
@@ -16,7 +16,7 @@ import io.restassured.path.json.JsonPath;
  * @author PRAAMBI
  *
  */
-public class WeatherAPIResponse {
+public class CleartripAPIResponse {
 	
 	public Properties props;
 	public BasePage basepage;
@@ -29,7 +29,7 @@ public class WeatherAPIResponse {
 		 * System.setProperty("javax.net.ssl.trustStore", "C:/.keystore");
 		 * System.setProperty("javax.net.ssl.trustStorePassword", "changeit");
 		 */
-		basepage.init_properties();
+		//basepage.init_properties();
 		RestAssured.baseURI= props.getProperty("BaseURI");
 		String response = 	given().log().all().header("Content-Type","application/json").
 				queryParam("q", props.getProperty("city")).

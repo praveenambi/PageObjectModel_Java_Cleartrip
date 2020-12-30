@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [Suite]">
+  <test thread-count="5" verbose="2" name="RegressionTests(failed)">
     <classes>
-      <class name="com.weatherInfo.tests.WeatherInfoHomeTest">
+      <class name="com.cleartrip.tests.ItenaryTest">
         <methods>
-          <include name="LaunchSetup"/>
-          <include name="teardown"/>
-          <include name="getCityWeatherdetails"/>
+          <include name="bookticketTest"/>
         </methods>
-      </class> <!-- com.weatherInfo.tests.WeatherInfoHomeTest -->
+      </class> <!-- com.cleartrip.tests.ItenaryTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- RegressionTests(failed) -->
+</suite> <!-- Failed suite [Suite] -->

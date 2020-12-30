@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" verbose="10" >
+<suite name="Suite" verbose="2" >
   <test name="RegressionTests">
 		<classes>
-			<class name="com.weatherInfo.tests.WeatherInfoHomeTest" />
+			<class name="com.cleartrip.tests.ClearpageHomeTest" />
+			<class name="com.cleartrip.tests.ItenaryTest" />
 		</classes>
 	</test>
 </suite> <!-- Suite -->
